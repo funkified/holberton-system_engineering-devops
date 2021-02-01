@@ -1,0 +1,11 @@
+total 32
+drwxrwxr-x  6 vagrant vagrant 4096 Feb  1 02:59 .
+drwxr-xr-x 12 vagrant vagrant 4096 Feb  1 02:59 ..
+drwxrwxr-x  8 vagrant vagrant 4096 Feb  1 02:56 .git
+drwxrwxr-x  2 vagrant vagrant 4096 Feb  1 02:15 0x00-shell_basics
+drwxrwxr-x  2 vagrant vagrant 4096 Feb  1 02:15 0x01-shell_permissions
+drwxrwxr-x  3 vagrant vagrant 4096 Feb  1 02:59 0x02-shell_redirections
+-rw-rw-r--  1 vagrant vagrant   35 Feb  1 02:15 README.md
+-rw-rw-r--  1 vagrant vagrant   17 Feb  1 02:15 \*\\'"Holberton"\'\\*$\?\*\*\*\*:)
+lrwxrwxrwx  1 vagrant vagrant    7 Feb  1 02:15 __ls__ -> /bin/ls
+-rw-rw-r--  1 vagrant vagrant    0 Feb  1 02:59 ls_cwd_content
