@@ -1,2 +1,2 @@
 #!/bin/bash
-xargs -n 2 | cut -d' ' -f 1
+cat -n | grep "^[ 0-9]*[13579]\>" | cut -f 2-
