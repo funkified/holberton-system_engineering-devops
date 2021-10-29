@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# display Best School until variable is 9
+
+i=0
+
+while (( i <= 10 ))
+do
+		echo "Best School";
+
+		if [ $i == 9 ];
+		then
+			echo "Hi"
+		fi
+		(( i++ ))
+done
