@@ -1,0 +1,5 @@
+# Creates an RSA key Pair
+# Pirvate key name: school
+# Passphrase: betty
+
+ssh-keygen -b 4096 -f school -N betty
