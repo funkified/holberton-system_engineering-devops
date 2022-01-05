@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#Fix server by starting Apache inside
-#Docker container
+# Fix server by starting Apache inside
 
 sudo service apache2 start
