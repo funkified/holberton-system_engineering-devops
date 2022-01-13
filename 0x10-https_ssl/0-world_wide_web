@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 # Configure your domain zone so that the subdomain www
 
-display_info ()
-{
-    domain="$1"
-    subdomain="$2"
-    dig "$subdomain.$domain" | awk '/ANSWER SECTION:/{getline; printf "The subdomain %s is a %s record and points to %s\n", var, $4, $5}' var="$subdomain"
-}
+info () {
+	dig "$2.$1" | awk '/;; ANSWER SECTION/ {getline;
+	printf "The subdomain %s is a %s record and points to %s\n", SUB, $4, $5}' SUB="$2"
+	}
 
-for subdomain in "www" "lb-01" "web-01" "web-02"
-do
-    if [ -z "$2" ] || [ "$2" == "$subdomain" ] ;
-    then
-	display_info "$1" "$subdomain"
-    fi
-done
+if [[ $# -gt 1 ]]
+then
+	info "$1" "$2"
+else
+	info "$1" "www"
+	info "$1" "lb-01"
+	info "$1" "web-01"
+	info "$1" "web-02"
+fi
