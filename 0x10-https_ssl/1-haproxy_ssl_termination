@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-proxy_ssl_termination 
-=======
->>>>>>> task 1
 global
 	log /dev/log	local0
 	log /dev/log	local1 notice
