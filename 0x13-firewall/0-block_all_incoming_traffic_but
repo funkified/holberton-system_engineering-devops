@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script to configue ufw firewall and setup to block all traffic except:
+# SSH, HTTPS SSL, HTTP
+
+sudo ufw enable
+sudo ufw allow ssh
+sudo ufw allow http
+sudo ufw allow https
