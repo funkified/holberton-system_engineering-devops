@@ -2,4 +2,4 @@
 # Connect to server using private key '~/.ssh/school'
 # username 'ubuntu'
 
-ssh -i ~/.ssh/school ubuntu@35.237.70.179
+ssh -i ~/.ssh/school ubuntu@34.233.119.96
