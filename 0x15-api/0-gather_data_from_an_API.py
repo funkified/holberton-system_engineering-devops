@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/python3
+=======
+#!/bin/bash/python3
+>>>>>>> task 0
 """
 REST API script
 """
@@ -21,4 +25,7 @@ if __name__ == '__main__':
           format(user.get('name'), len(done_task), len(todo)))
     for done in done_task:
         print('\t {}'.format(done))
+<<<<<<< HEAD
 
+=======
+>>>>>>> task 0
