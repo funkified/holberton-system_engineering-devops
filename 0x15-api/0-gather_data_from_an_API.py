@@ -7,17 +7,23 @@ import requests
 from sys import argv
 
 if __name__ == '__main__':
-    employee_id = int(argv[1])
+    employee_id = argv[1]
     user = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
-                        format(employee_id)).json()
-    todo = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
-                        format(employee_id)).json()
+                        format(employee_id))
 
-    done_task = []
+    name_employee = user.json()['name']
+    todo = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
+                        format(employee_id))
+    todo = todo.json()
+
+    task_list = []
+    done_task = 0
     for task in todo:
-        if task.get('completed') is True:
-            done_task.append(task.get('title'))
+        if task['completed'] is True:
+            done_task += 1
+            task_list.append(task['title'])
     print("Employee {} is done with tasks({}/{}):".
-          format(user.get('name'), len(done_task), len(todo)))
-    for done in done_task:
-        print('\t {}'.format(done))
+          format(name_employee, done_task, len(todo)))
+
+    for done in range(len(task_list)):
+        print("\t {}".format(task_list[done]))
