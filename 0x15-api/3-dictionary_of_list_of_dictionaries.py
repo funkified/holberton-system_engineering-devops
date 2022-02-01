@@ -31,5 +31,5 @@ if __name__ == '__main__':
 
         toDoList[usrID.get('id')] = json_list
 
-    with open("todo_all_employess.json", 'w') as jFile:
+    with open("todo_all_employees.json", 'w') as jFile:
         json.dump(toDoList, jFile)
