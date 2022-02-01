@@ -29,7 +29,7 @@ if __name__ == '__main__':
                 'completed': data['completed']
             })
 
-        toDoList[employee_id] = json_list
+        toDoList[usrID.get('id')] = json_list
 
     with open("todo_all_employess.json", 'w') as jFile:
         json.dump(toDoList, jFile)
