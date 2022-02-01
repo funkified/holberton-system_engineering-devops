@@ -14,7 +14,7 @@ if __name__ == '__main__':
     user = requests.get('https://jsonplaceholder.typicode.com/users/{}'
                         .format(employee_id))
 
-    name_employee = user.json()['name']
+    name_employee = user.json()['username']
     todo = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'
                         .format(employee_id))
     todo = todo.json()
