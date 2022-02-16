@@ -2,7 +2,6 @@
 """
 Scripts that GET Reddit API
 """
-import json
 from requests import *
 
 
