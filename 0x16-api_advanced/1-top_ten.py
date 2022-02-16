@@ -17,5 +17,5 @@ def top_ten(subreddit):
         print('None')
     else:
         posts = jreq['data']['children']
-        for i in range(len(posts)):
+        for i in posts:
             print(posts[i]['data']['title'])
