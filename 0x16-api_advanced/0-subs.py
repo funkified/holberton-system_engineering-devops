@@ -2,7 +2,6 @@
 """
 Scripts that GET Reddit API
 """
-from sys import argv
 import json
 from requests import *
 
