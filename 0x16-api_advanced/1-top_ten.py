@@ -14,7 +14,7 @@ def top_ten(subreddit):
     jreq = req.json()
 
     if req.status_code == 400:
-        print(None)
+        print('None')
     else:
         posts = jreq['data']['children']
         for i in range(len(posts)):
