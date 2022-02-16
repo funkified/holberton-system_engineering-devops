@@ -8,7 +8,7 @@ from requests import *
 
 def top_ten(subreddit):
     """ GET the top ten of hot post on reddit """
-    url = 'https://www.reddit.com/r/' + subreddit + '/hot.json?limit=10'
+    url = 'https://www.reddit.com/r/' + subreddit + '/.json?limit=10'
     agent = {'User-agent': 'funkified'}
     req = get(url, headers=agent)
     jreq = req.json()
