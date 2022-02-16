@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """
 Scripts that GET Reddit API
 """
@@ -10,7 +10,7 @@ from requests import *
 def number_of_subscribers(subreddit):
     """ GET the number of subscribers on reddit """
 
-    url = 'https://www.reddit.com/r/' + '{}' + '/about.json'.format(subreddit)
+    url = 'https://www.reddit.com/r/' + subreddit + '/about.json'
     agent = {'User-agent': 'funkified'}
     req = get(url, headers=agent)
     jreq = req.json()
